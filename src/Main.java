@@ -290,8 +290,8 @@ public class Main {
                 System.out.println("Please try again");
             }
         }
-        System.out.println("you have deposited " + depoAmount + " into your " + accountType + ", account number: " + account.getAccountNumber());
-        System.out.println("Your new balance: " + account.getBalance());
+        System.out.printf("you have deposited $%.2f into your %s, account number: %s\n", depoAmount, accountType, account.getAccountNumber());
+        System.out.printf("Your new balance: $%.2f\n", account.getBalance());
     }
 
     //allow a specific user to withdraw an amount from their checking account
@@ -350,6 +350,7 @@ public class Main {
                 break;
             }catch (InsufficientFundsException iFE){
                 System.out.println(iFE.getMessage());
+                System.out.printf("Your current balance: $%.2f\n", account.getBalance());
                 return;
             }catch(InputMismatchException iME){
                 System.out.println("Invalid. Please enter a number");
@@ -359,8 +360,8 @@ public class Main {
                 System.out.println("Please try again");
             }
         }
-        System.out.println("you have withdrawn " + withdrawAmount + " from your checking account, account number: " + account.getAccountNumber());
-        System.out.println("Your new balance: " + account.getBalance());
+        System.out.printf("you have withdrawn $%.2f from your checking account, account number: %s\n", withdrawAmount, account.getAccountNumber());
+        System.out.printf("Your new balance: $%.2f\n", account.getBalance());
     }
 
     public static void main(String[] args) {

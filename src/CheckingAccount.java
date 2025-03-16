@@ -41,8 +41,8 @@ public class CheckingAccount extends BankAccount{
     public void displayAccountInfo() {
         System.out.println("CHECKING ACCOUNT");
         System.out.println("Account number: " + getAccountNumber());
-        System.out.printf("Balance: %.2f\n", getBalance());
-        System.out.printf("Overdraft limit: %.2f\n", getOverdraftLimit());
+        System.out.printf("Balance: $%.2f\n", getBalance());
+        System.out.printf("Overdraft limit: $%.2f\n", getOverdraftLimit());
         System.out.println();//skip to the next line
     }
 }

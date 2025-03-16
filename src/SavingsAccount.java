@@ -35,8 +35,8 @@ public class SavingsAccount extends BankAccount{
     public void displayAccountInfo() {
         System.out.println("SAVING ACCOUNT");
         System.out.println("Account number: " + getAccountNumber());
-        System.out.printf("Balance: %.2f\n", getBalance());
-        System.out.printf("Interest rate: %.2f\n", getInterestRate());
+        System.out.printf("Balance: $%.2f\n", getBalance());
+        System.out.printf("Interest rate: %.2f%%\n", getInterestRate());
         System.out.println();//skip to the next line
     }
 }
